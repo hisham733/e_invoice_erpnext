@@ -24,7 +24,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
 
   custom-erpnext-nginx:
-    image: ${DOCKER_USERNAME}/custom-erpnext-nginx-ttd:${ERPNEXT_VERSION}
+    image: ${DOCKER_USERNAME}/custom-erpnext-nginx-tdd:${ERPNEXT_VERSION}
     restart: on-failure
     environment:
       - FRAPPE_PY=erpnext-python
@@ -163,4 +163,3 @@ volumes:
   assets-vol:
   sites-vol:
   cert-vol:
-
